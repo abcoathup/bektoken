@@ -12,6 +12,7 @@
     "zeppelin-solidity": "^1.8.0"
   },
   "devDependencies": {
+    "ganache-cli": "^6.1.0",
     "truffle": "^4.1.7",
     "truffle-hdwallet-provider": "0.0.3"
   }
