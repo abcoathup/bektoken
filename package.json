@@ -9,8 +9,10 @@
   "license": "UNLICENSED",
   "dependencies": {
     "dotenv": "^5.0.1",
-    "truffle": "^4.1.7",
-    "truffle-hdwallet-provider": "0.0.3",
     "zeppelin-solidity": "^1.8.0"
+  },
+  "devDependencies": {
+    "truffle": "^4.1.7",
+    "truffle-hdwallet-provider": "0.0.3"
   }
 }
