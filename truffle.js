@@ -27,11 +27,12 @@ module.exports = {
       provider: ropstenProvider,
       network_id: 3, // eslint-disable-line camelcase
       gas: 4000000,  // default 4712388 is too high
+      gasPrice:1000000000,
     },
     live: {
-      provider: providerWithMnemonic(process.env.MNEMONIC, infuraUrl('mainnet')),
+      provider: providerWithMnemonic(process.env.MAINNET_MNEMONIC, infuraUrl('mainnet')),
       network_id: 1, // eslint-disable-line camelcase
-      gas: 4000000,  // default 4712388 is too high
+      gasPrice:1000000000,
     },
     ganache: {
       host: 'localhost',
