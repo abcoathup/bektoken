@@ -9,7 +9,7 @@
   "license": "UNLICENSED",
   "dependencies": {
     "dotenv": "^5.0.1",
-    "zeppelin-solidity": "^1.8.0"
+    "openzeppelin-solidity": "^1.9.0"
   },
   "devDependencies": {
     "ganache-cli": "^6.1.0",
