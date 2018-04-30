@@ -6,6 +6,7 @@ contract('BekToken', function ([owner, anotherAccount]) {
   const _name = 'BekToken';
   const _symbol = 'BEK';
   const _decimals = 18;
+  const _cap = (100 * 10 ** 9) * (10 ** _decimals);
 
   beforeEach(async function () {
     token = await BekToken.new({ from: owner });
@@ -36,11 +37,15 @@ contract('BekToken', function ([owner, anotherAccount]) {
       const ownerBalance = await token.balanceOf(owner);
       assert(ownerBalance.eq(0));
     });
+    
+    it('has the cap set', async function () {
+      const tokenCap = await token.cap();
+      assert(tokenCap.eq(_cap));
+    });
   });
 
   describe('token minting', function () {
     const amount = 100;
-    const cap = 10**9**10**18;
     const from = owner;
 
     it('can mint to owner', async function () {
@@ -74,7 +79,7 @@ contract('BekToken', function ([owner, anotherAccount]) {
       await token.mint(owner, amount, { from });
 
       try {
-        await token.mint(owner, cap, { from });
+        await token.mint(owner, _cap, { from });
 
         assert.fail('Expected revert not received');
       } catch (error) {

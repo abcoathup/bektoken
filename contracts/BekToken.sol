@@ -10,6 +10,6 @@ import "openzeppelin-solidity/contracts/token/ERC20/DetailedERC20.sol";
 contract BekToken is CappedToken, DetailedERC20 {
   uint8 constant _decimals = 18;
 
-  constructor() CappedToken(10**9 * 10**uint256(_decimals)) DetailedERC20("BekToken", "BEK", _decimals) public {}
+  constructor() CappedToken(100 * 10**9 * 10**uint256(_decimals)) DetailedERC20("BekToken", "BEK", _decimals) public {}
 
 }
