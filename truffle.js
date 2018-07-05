@@ -37,6 +37,12 @@ module.exports = {
       gas: 3000000,
       gasPrice:2100000000,
     },
+    azuredev: {
+      provider: providerWithMnemonic(process.env.AZUREDEV_MNEMONIC, 'http://localhost:8545'),
+      network_id: '*', // eslint-disable-line camelcase
+      gas: 3000000,  
+      gasPrice:90000000000,
+    },
     coverage: {
       host: 'localhost',
       port: 8555,
