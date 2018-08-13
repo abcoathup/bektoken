@@ -10,11 +10,11 @@
   "license": "UNLICENSED",
   "dependencies": {
     "dotenv": "^5.0.1",
-    "openzeppelin-solidity": "^1.10.0"
+    "openzeppelin-solidity": "^1.11.0"
   },
   "devDependencies": {
-    "ganache-cli": "^6.1.4",
-    "solidity-coverage": "^0.5.5",
+    "ganache-cli": "^6.1.6",
+    "solidity-coverage": "^0.5.7",
     "truffle": "^4.1.13",
     "truffle-hdwallet-provider": "0.0.5"
   }
